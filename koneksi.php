@@ -2,7 +2,7 @@
     error_reporting(E_ALL ^ E_DEPRECATED);
     $host   = "localhost";
     $user   = "root";
-    $pass   = "";
+    $pass   = "123";
     $dbName = "hassanweb";
 
     $kon = mysqli_connect($host, $user, $pass);
