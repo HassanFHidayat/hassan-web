@@ -15,3 +15,5 @@
      - username : root
      - password : 123
 8. Pada website yang muncul bisa digunakan untuk menambahkan, mengedit dan menghapus data user.
+9. Untuk menghentikan docker-compose yang sedang berjalan bisa menggunakan perintah :
+   - ```docker-compose down```
