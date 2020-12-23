@@ -11,7 +11,8 @@
     $hasilUserHapus = mysqli_query($kon, $sqlUserHapus);
 
     if ($hasilUserHapus) {
-        header("location:user.php");
+        echo("<script>location.href = 'user.php';</script>");
+        //header("location:user.php");
     } else {
         echo "Gagal hapus, silahkan diulang!";
         echo "<br/><input type='button' value='Kembali' onClick='self.history.back()' class='btn' />";
