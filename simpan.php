@@ -1,7 +1,6 @@
 <?php
     include "koneksi.php";
 
-    $id = $_POST['id'];
     $nama = $_POST['nama'];
     $email = $_POST['email'];
     $job = $_POST['jabatan'];
