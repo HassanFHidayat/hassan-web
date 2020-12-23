@@ -37,7 +37,7 @@
             echo "<br/><input type='button' value='Kembali' onClick='self.history.back()' class='btn' />";
             exit;
         } else {
-            header("location:user.php");
+           header("location:user.php");
         }
     }
 ?>
