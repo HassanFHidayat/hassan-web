@@ -1,6 +1,6 @@
 <?php
     error_reporting(E_ALL ^ E_DEPRECATED);
-    $host   = "localhost";
+    $host   = "db";
     $user   = "root";
     $pass   = "123";
     $dbName = "hassanweb";

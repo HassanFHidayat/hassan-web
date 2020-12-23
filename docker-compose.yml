@@ -1,6 +1,11 @@
 version: '3'
 
 services:
+    php:
+        build: .
+        volumes:
+            - ./:/hassan-web
+
     web:
         image: nginx:latest
         ports:
@@ -8,23 +13,19 @@ services:
         volumes:
             - ./:/hassan-web
             - ./site.conf:/etc/nginx/conf.d/default.conf
-        networks:
-            - code-network
-    php:
-        build: .
-        volumes:
-            - ./:/hassan-web
-        networks:
-            - code-network
+        depends_on:
+            - php
 
     db:
         image: mysql:8.0
-        container_name: mysq_server
+        container_name: db
         restart: always
         volumes:
            - .data/:/var/lib/mysql
         ports:
            - '6603:3306'
+        depends_on:
+           - php
         environment:
            MYSQL_ROOT_PASSWORD: 123
 
@@ -38,7 +39,3 @@ services:
            - '80:80'
         environment:
            PMA_HOST: db
-
-networks:
-    code-network:
-        driver: bridge
