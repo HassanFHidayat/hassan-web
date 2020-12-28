@@ -5,7 +5,7 @@
 3. Clone repository ini dengan menjalankan perintah :
    - ```git clone https://github.com/HassanFHidayat/hassan-web.git```
 4. Masuk ke direktori hassan-web.
-   - ```cd /hassan-web```
+   - ```cd hassan-web```
 5. Setelah berada pada direktori hassan-web, ubah permission direktori foto terlebih dahulu. Sehingga ketika website dijalankan dapat menyimpan foto yang diupload. Ukuran maksimal file foto yang bisa diupload adalah 2MB.
    - ```chmod -R 777 foto/```
 6. Kemudian build menggunakan docker-compose dan tunggu hingga proses selesai.
